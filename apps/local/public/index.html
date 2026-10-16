@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一关 · Vibe Learning</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><header><div><strong>Vibe Learning</strong><span>本地像素实验室</span></div><button id="quit" class="quiet">退出应用</button></header>
+<main><div class="title"><p>TinyRenderer / 第一关</p><h1>改一个像素，看到变化</h1><p>读一点代码，改一个颜色，用自己的眼睛验证。</p></div>
+<div id="environment" role="status">正在连接本地应用…</div><div id="warnings" role="alert"></div>
+<div class="workspace"><article id="lesson" aria-label="第一关讲解"></article>
+<section class="workbench" aria-label="代码与结果"><div class="toolbar"><h2>你的代码</h2><span id="save-state" role="status">正在读取…</span></div>
+<p class="muted">只编辑浅色区域。其余代码由课程提供。</p><pre id="prefix" class="fixed"></pre><label for="editor">颜色定义（可编辑）</label><textarea id="editor" spellcheck="false" aria-label="颜色定义" disabled></textarea><pre id="suffix" class="fixed"></pre>
+<div class="actions"><button id="save" disabled>保存</button><button id="run" class="primary" disabled>保存并运行</button></div>
+<section class="output"><h2>本次图片</h2><p id="run-state" role="status">先运行初始代码，观察黑底上的白点。</p><div class="image-area"><img id="preview" width="320" height="320" alt="本次运行生成的像素图片" hidden><p id="empty">还没有本次结果</p></div><p id="snapshot" class="muted"></p><p class="muted">16 × 16 原图，放大 20 倍。运行成功不代表通关。</p><pre id="diagnostics" tabindex="0" hidden></pre></section>
+<details><summary>初始图片对照</summary><canvas id="baseline" width="16" height="16" aria-label="初始黑底白点图"></canvas><p class="muted">静态对照：白点位于 (4,6)，不是本次运行结果。</p></details>
+<section class="answer"><h2>需要看完整答案？</h2><p>查看后会记录“已看答案”，不计作独立完成证据。</p><button id="answer">查看答案</button><div id="answer-content"></div></section>
+</section></div></main><footer>仅在本机保存与运行。关闭浏览器后，服务仍会继续运行。</footer></body></html>

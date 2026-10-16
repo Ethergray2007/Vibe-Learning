@@ -1,0 +1,24 @@
+# Dependencies and generated frontend/native builds
+**/node_modules/
+apps/local/dist/
+*.exe
+*.obj
+*.o
+
+# Local test data may contain session credentials and draft code
+apps/local/tests/test-data-*/
+apps/local/tests/probe-data-*/
+apps/local/tests/iso-*/
+apps/local/tests/ui-data/
+apps/local/tests/probe-home/
+courses/tinyrenderer/artifacts/
+
+# Generated review archives and transient diagnostics
+apps/local/review/SOURCES.zip
+*.log
+*.tmp
+.dsh-*
+.env
+.env.*
+!.env.example
+*.node
