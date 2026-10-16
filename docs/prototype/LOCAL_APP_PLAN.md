@@ -1,16 +1,16 @@
 # 本地应用实施决定
 
-更新：2026-10-16。状态：按用户真人试用反馈调整，优先于历史 A1 限制。历史决定见 docs/archive/LOCAL_APP_PLAN_A1.md。
+更新：2026-10-17。状态：按用户真人试用反馈调整，优先于历史 A1 限制。历史决定见 docs/archive/LOCAL_APP_PLAN_A1.md。
 
 ## 文档定位
 
-本文仅描述当前第一关验证原型的实现与验收，不定义完整产品范围。完整第一版以 docs/product/PROJECT_PLAN.md v0.6 为准，AI 制课、课程包、版本、插件/SDK/MOD 等仍需实现。本地化不取消这些需求。
+本文仅描述当前前两关验证原型的实现与验收，不定义完整产品范围。完整第一版以 docs/product/PROJECT_PLAN.md v0.6 为准，AI 制课、课程包、版本、插件/SDK/MOD 等仍需实现。本地化不取消这些需求。
 
 ## 当前范围与用户决定
 
 用户明确要求：题面精简并参考洛谷组织；开放完整代码编辑；提交正确答案得到绿色 AC；使用 shadcn/ui；看到章节及后续学习内容。
 
-本轮由主对话修改 apps/local/** 以及公共规划。只接入第一关判题，第二关和后续课程仍不开放。源课程资料保持原样。
+本轮由主对话修改 apps/local/** 以及公共规划。接入前两关判题；第二关由第一关 AC 解锁，后续章节仍不开放。源课程资料保持原样。
 
 ## 技术方案
 
@@ -26,11 +26,11 @@
 
 题目默认标签只展示任务、输入、输出与样例；语言解释放知识与提示；题解主动加载。题目头部显示题号、难度和已通过状态。编辑器支持完整 main.cpp、行号、Tab 缩进、保存、重置确认和 Ctrl+Enter 提交。
 
-课程路线依次展示：从像素到线段、绘制三角形、走进三维空间、让画面有质感。每章列出目标与练习。只有第一关可学习；第二关为草稿待接入；其余为规划或后续方向，不显示虚构通关率，不把 AC 当作已证明学习效果。
+课程路线依次展示：从像素到线段、绘制三角形、走进三维空间、让画面有质感。每章列出目标与练习。第一关可学习；通过后第二关可学习；其余为规划或后续方向，不显示虚构通关率，不把 AC 当作已证明学习效果。
 
 ## 执行与判题
 
-运行和提交分开：运行只编译、执行、检查输出结构并展示图片；提交额外检查实际像素。无需与参考代码逐字一致。
+运行和提交分开：运行只编译、执行、检查输出结构并展示图片；提交第一关检查实际像素，第二关检查 line 函数行为。无需与参考代码逐字一致。
 
 第一关 AC 条件：BMP/TGA 都是有效的 16×16 图片且像素一致；(4,6) 为 RGB(255,0,0)，其他 255 个像素为黑色。评测返回 AC、WA、CE、RE、TLE、SE，前端绿色 AC 提示和弹出成功反馈。AC 进度本地持久化；后续错误和查看答案不撤销通过。
 
@@ -38,7 +38,7 @@
 
 ## 保存、访问及退出
 
-完整源文件保存到 %LOCALAPPDATA%/VibeLearning/drafts/tinyrenderer/level-01/starter.cpp，原来版本保存的完整草稿可直接恢复。学习标记 learning.json 合并保存 answerSeen、passed、passedAt、acceptedSourceHash，不能互相覆盖。
+完整源文件保存到 %LOCALAPPDATA%/VibeLearning/drafts/tinyrenderer/<levelId>/starter.cpp，原来版本保存的完整草稿可直接恢复。学习标记 learning.json 合并保存 answerSeen、passed、passedAt、acceptedSourceHash，不能互相覆盖。
 
 保存排队并检查 revision，运行使用保存过的快照。UI 结果始终对应运行时的代码，修改后明确提示。重置需确认，关闭未保存页面提示。运行产物按 sessionId/runId 隔离，图片 URL 绑定 runId，禁止缓存。
 
@@ -63,6 +63,6 @@
 
 运行结果/图片在当前服务保留至多 32 项，终态最长 30 分钟；新运行不清空全部历史。过期不影响已持久化的 AC，但不是永久提交历史。
 
-Windows 进程执行通过 native/job-runner.exe 加入 Job Object，正常主进程结束也终止后代；宿主进程退出由监视与句柄关闭收尾。构建步骤新增 tools/build-native.mjs，生成的 exe 是必需运行资源，正式打包需一并提供。编译临时文件在当前拥有目录。仍不构成完整安全沙箱。
+Windows 进程由 Node 启动受控 worker，Node-API 模块 native/job-control.node 先将 worker 加入 Job Object，再许可其启动编译器或学习者程序。正常主进程结束也终止后代；句柄关闭收尾。构建使用 node-api-headers 开发依赖与 tools/build-native.mjs；原生模块和 worker.mjs 是必需运行资源。编译临时文件在当前拥有目录。仍不构成完整安全沙箱。
 
-24 项检查及真实浏览器退出竞争/SE 复测记录见 apps/local/REVIEW_FIXES.md。第二关方案已确认，详见 docs/LEVEL02_DECISIONS.md，尚未开放。
+26 项检查通过，包括 LocalAppData 独立数据根。第二关运行执行 main 并预览；提交独立编译检查器，按精确取整规则检查 line，AC 可以没有图片。详见 docs/prototype/LEVEL02_DECISIONS.md 和 apps/local/VALIDATION.md。

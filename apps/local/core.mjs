@@ -8,7 +8,7 @@ const require=createRequire(import.meta.url);
 
 export const hash = text => createHash('sha256').update(text).digest('hex');
 export const headings = ['目标','只学本题需要的 C++','任务与可修改范围','公开样例和完成条件','典型错误','逐级提示','答案解析'];
-// COURSE_FORMAT.md §3: section 8 is the level's own transfer exercise, so only
+// docs/prototype/COURSE_FORMAT.md「内容文件」: section 8 is the level's own transfer exercise, so only
 // its prefix is fixed; the题目名 belongs to the course, not to the application.
 export const transferPrefix = '迁移练习：';
 const lastHeadingLabel = i => i === headings.length ? '第 8 个应以「'+transferPrefix+'」开头' : '第 '+(i+1)+' 个应为「'+headings[i]+'」';
@@ -29,7 +29,7 @@ function headingProblem(found){
     +'  '+headings.map((t,i)=>'「'+(i+1)+' '+t+'」').join('、')+'、「8 '+transferPrefix+'<本关题目名>」。\n'
     +'实际读到的二级标题：'+list(found.map(f=>'「'+f.title+'」（'+f.where+'）'))+'。\n'
     +'首个不一致：'+mismatch[0]+'。\n'
-    +'请课程维护者按 COURSE_FORMAT.md 第 3 节修改 lesson.md 的二级标题后重新打开页面。';
+    +'请课程维护者按 docs/prototype/COURSE_FORMAT.md 的“内容文件”一节修改 lesson.md 的二级标题后重新打开页面。';
 }
 export function parseLesson(text) {
   const normalized=text.replaceAll('\r\n','\n');

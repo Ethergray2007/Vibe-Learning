@@ -27,7 +27,7 @@
 | 文档 | 内容 | 状态 |
 | --- | --- | --- |
 | [LOCAL_APP_PLAN.md](prototype/LOCAL_APP_PLAN.md) | 本地应用实施决定：技术方案、页面与路线、执行与判题、保存与访问边界、验收项、R1 修复补充 | 描述当前实现 |
-| [COURSE_FORMAT.md](prototype/COURSE_FORMAT.md) | 最小课程与运行结果约定：lesson.md 八标题契约、`/api/state` 字段、第一关像素判题、结果字段表、验证边界 | 描述当前实现 |
+| [COURSE_FORMAT.md](prototype/COURSE_FORMAT.md) | 最小课程与运行结果约定：lesson.md 八标题契约、`/api/state` 字段、前两关像素/函数判题、结果字段表、验证边界 | 描述当前实现 |
 
 ### tasks/ — 当前任务
 
@@ -35,11 +35,11 @@
 | --- | --- | --- |
 | [TASKS.md](tasks/TASKS.md) | 任务与交付状态表、产品范围校正、当前决定、协作规则、仓库状态 | 每轮开工先读 |
 
-### 其他公共文档
+### prototype/ 补充决定
 
 | 文档 | 内容 |
 | --- | --- |
-| [LEVEL02_DECISIONS.md](LEVEL02_DECISIONS.md) | 第二关接入决定：精确取整规则、独立翻译单元与函数判题、A2 必须处理的集成边界 |
+| [LEVEL02_DECISIONS.md](prototype/LEVEL02_DECISIONS.md) | 第二关接入决定：精确取整规则、独立翻译单元与函数判题、A2 必须处理的集成边界 |
 
 ### archive/ — 历史追溯（只读，内容与其中路径保持原样）
 
@@ -71,9 +71,8 @@
 | COURSE_FORMAT.md | docs/prototype/COURSE_FORMAT.md |
 | TASKS.md | docs/tasks/TASKS.md |
 
-已同步更新引用的文件：AGENTS.md、docs/product/PROJECT_PLAN.md、docs/product/PLUGIN_ARCHITECTURE.md、docs/prototype/LOCAL_APP_PLAN.md、docs/prototype/COURSE_FORMAT.md、docs/tasks/TASKS.md、docs/LEVEL02_DECISIONS.md。
+已同步更新引用的文件：AGENTS.md、docs/product/PROJECT_PLAN.md、docs/product/PLUGIN_ARCHITECTURE.md、docs/prototype/LOCAL_APP_PLAN.md、docs/prototype/COURSE_FORMAT.md、docs/tasks/TASKS.md、docs/prototype/LEVEL02_DECISIONS.md。
 
-仍使用旧路径的位置（有意保留，不是遗漏）：
+历史路径处理：docs/archive/**、handoff/** 与课程作者交付记录按原样保留，可按上表换算。交付记录描述当时状态，不代表当前应用状态；当前前两关接入情况以 tasks/TASKS.md、prototype/COURSE_FORMAT.md 和应用 VALIDATION.md 为准。
 
-- docs/archive/**、handoff/**、courses/tinyrenderer/** 里的历史记录按原样保留，改写会破坏它们作为历史证据的价值；按上表换算即可。
-- apps/local/API.md、apps/local/core.mjs、apps/local/tests/integration.mjs 中提到“根目录 COURSE_FORMAT.md”“COURSE_FORMAT.md 第 3 节”。这三个文件都在 R1 定版快照 apps/local/review/FILES.sha256 的 SHA-256 校验范围内，改动会让该审查证据失效，因此本轮不动；留待下次应用侧改动时顺带更新，届时需重跑 `node apps/local/tools/manifest.mjs`。
+2026-10-17 已修正文档合并残留、第二关接入状态、Node-API 进程组方案，以及应用中的旧文档指引。第二关决定归入 prototype/；应用 review 快照重新生成。历史审查结论不自动升级为本次验收通过。

@@ -32,6 +32,8 @@ const courseFiles=[
   'courses/tinyrenderer/level-01/reference.cpp',
   'courses/tinyrenderer/level-01/transfer.cpp',
   'courses/tinyrenderer/level-02/lesson.md',
+  'courses/tinyrenderer/level-02/starter.cpp',
+  'courses/tinyrenderer/level-02/reference.cpp',
 ];
 
 async function walk(directory){
@@ -71,7 +73,7 @@ await fs.writeFile(path.join(review,'FILES.sha256'),
 `# apps/local 交付文件摘要（SHA-256）
 #
 # 由 node apps/local/tools/manifest.mjs 生成，生成时间 ${stamp}。
-# 本项目已关联 Git 仓库，当前初始提交尚未创建；此快照作为补充，R1 审查以本清单与同目录 SOURCES.zip 作为固定快照。
+# 本项目已关联 Git 仓库；此快照作为补充，R1 审查以本清单与同目录 SOURCES.zip 作为固定快照。
 # 比对方式：node apps/local/tools/manifest.mjs --check
 #
 # sha256                                                            bytes  path
@@ -89,7 +91,7 @@ function snapshot(rows,stamp){
 
 生成时间：${stamp}
 生成方式：\`node apps/local/tools/manifest.mjs\`
-用途：本项目已关联 Git 仓库，当前初始提交尚未创建；此快照作为补充，R1 审查针对本清单与 \`SOURCES.zip\` 中的文件内容；比对方式 \`node apps/local/tools/manifest.mjs --check\`。
+用途：本项目已关联 Git 仓库；此快照作为补充，R1 审查针对本清单与 \`SOURCES.zip\` 中的文件内容；比对方式 \`node apps/local/tools/manifest.mjs --check\`。
 范围：apps/local/**（不含测试临时目录、生成的 exe、review/ 自身），加课程侧被应用读取的文件。
 未包含：运行时产物（%LOCALAPPDATA%\\VibeLearning\\ 下的草稿与运行目录）、Node.js 与 MSYS2 工具链、课程目录本身的其他文件。
 注意：\`apps/local/VALIDATION.md\` 是本快照生成时的验证记录，不是验收通过结论。

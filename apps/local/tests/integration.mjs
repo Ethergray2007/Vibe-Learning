@@ -289,7 +289,7 @@ test('runner timeout, bounded logs, cleanup and strict lesson parser',async()=>{
   assert.match(onlyOne(),/实际读到的二级标题：「目标」（第 1 行 4 列）/);
   assert.match(wrongTitle(),/第 1 个应为「目标」，实际读到：「目标要」（第 1 行 4 列）/);
   assert.match(missingMiddle(),/第 4 个应为「公开样例和完成条件」，实际读到：「典型错误」（第 4 行 4 列）/);
-  // COURSE_FORMAT.md §3: section 8's name belongs to the level, so its prefix is
+  // docs/prototype/COURSE_FORMAT.md「内容文件」: section 8's name belongs to the level, so its prefix is
   // checked and the rest of the title is free — but a missing prefix still fails.
   const lessonOf=async(...parts)=>parseLesson(await fs.readFile(new URL('../../../courses/tinyrenderer/'+parts.join('/'),import.meta.url),'utf8'));
   const one=await lessonOf('level-01','lesson.md');

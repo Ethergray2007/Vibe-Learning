@@ -1,36 +1,38 @@
 # apps/local 交付文件摘要（SHA-256）
 #
-# 由 node apps/local/tools/manifest.mjs 生成，生成时间 2026-10-16T08:42:12.486Z。
-# 本项目已关联 Git 仓库，当前初始提交尚未创建；此快照作为补充，R1 审查以本清单与同目录 SOURCES.zip 作为固定快照。
+# 由 node apps/local/tools/manifest.mjs 生成，生成时间 2026-10-16T18:13:20.165Z。
+# 本项目已关联 Git 仓库；此快照作为补充，R1 审查以本清单与同目录 SOURCES.zip 作为固定快照。
 # 比对方式：node apps/local/tools/manifest.mjs --check
 #
 # sha256                                                            bytes  path
-9c7a1b0e55a9873e07547dcf1b2a7b574689509b74739ed75c672b7ec0062e78      1409  apps/local/API.md
-3f503163a99ae75999f0aa87a326968fc385a50e9f2cbc49f49644a57beab426      3265  apps/local/README.md
-4eb284f8decd9b456015550e17ef905e3bef4a1a34c0718731da7aee2bf9b213      3371  apps/local/REVIEW_FIXES.md
-e7fd737747caa3f15053d1ceba9be5215f240ffaa75e0a80429ce508d6990e8c      3316  apps/local/VALIDATION.md
+664194cbb20501c2005cefd85f9db118301181c65e05158ec327dd1f2730e707      1562  apps/local/API.md
+a72fa3e9504a80ced836b986fee8dfd139fde15a5a9ddef448c888d086af116b      3406  apps/local/README.md
+1dcbdc69b891ba5126647afda07277777da94561dbe0fc9f1c98ea6ade74d2d5      1967  apps/local/REVIEW_FIXES.md
+82ff4111f1d3429e31ec3a3f58d9003d1119a2671d04c09ac54baa061b4ca3ac      5026  apps/local/VALIDATION.md
 d0ada54e59710099b766eae59a1a35d31b717a6ec43d73a8814de1815ddc1749       516  apps/local/components.json
-65fb23ffee7451b6a4721373cd736f172058c1d7a307d1d2a8fe0f74af6970a0     11320  apps/local/core.mjs
+97bd95de34738c8891e178b631240a4aac34293b3f2c64e76c2a70b5d016d5f2     12703  apps/local/core.mjs
 1697727b861468d5ecda37801efe5dda79f9958662f59baae7b8dd2457e39f0a      7316  apps/local/dist/app.js
 2317fa4bb293c9c0b110e18315d529235c47a0ddd3338cea3d8c7955e927899e      7420  apps/local/dist/assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2
 6894439694946a589d157ece003086960a6a4013d74a813dab7602efdb3d8c09     15084  apps/local/dist/assets/geist-cyrillic-wght-normal-BEAKL7Jp.woff2
 824f485b5d26e2f2da3c2b236132ece1bc8e4e43373452950bb0e40548b4313f     16512  apps/local/dist/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2
 19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1     29400  apps/local/dist/assets/geist-latin-wght-normal-BgDaEnEv.woff2
 8fa40e5d248247735eb97a0bd593b8852440430600d6ba01364c31fe0abc1fe1      8004  apps/local/dist/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2
-3f273f032fda5acd81aebe8e0eeb9f25a2ac46834c15888d2b87e75b132cc9d7     62354  apps/local/dist/assets/index-BdeTzcW0.css
-e6177afbe47399e10abbb48875b336568a7506659322dbd67d1ffa1dd29ae446    382162  apps/local/dist/assets/index-DaSJssjc.js
-a37dd3ef0b3a00043736906baab2c073d37f9aea2cc6f7b2e2a953323086f297       385  apps/local/dist/index.html
+ae2284a3757fbf6f2a838264b1d334f8cdd473d33e4cabb5708c95745cd6f6aa    385772  apps/local/dist/assets/index-BM52hhh8.js
+cb6115877109ed814ceebadbecd576079b766b1f2aea6b27bd65efb78c2bb768     57471  apps/local/dist/assets/index-DDpIZm4s.css
+aba00b26ece9a70713248c8dd32eded8aab88d541c79f0ab135257573a6f6986       385  apps/local/dist/index.html
 e18689d60ae8ecf5ce1637eaebf2d07a4b7f65e7397d0d4ffba78c769ff00382      3101  apps/local/dist/style.css
 50a010f4ee6c8b99a6f77c2460aa955f6bab6e6b9762e135aaabd81dd6993022       286  apps/local/index.html
-df0bfa77c905e22eead7596e42709d76a5a0642954314eb3b38ca4f190c158cd      3550  apps/local/native/job-runner.cpp
-73129c0a64c9f01340a80d06daf068a98d94c16f5bda46a85cda148d24f15e6e    802389  apps/local/native/job-runner.exe
-19b10de248f2247f059448a3f094420ce4c360747fba93a98e9176ca18e06b15    270444  apps/local/package-lock.json
-e85b1d101f1978a6769b226e6878a73d94366595bb72d450abed45b5b7461818       965  apps/local/package.json
+d4aba446c006ce3f8d6d7be3222c4b0c2068899f956188919924ff965635d92a      4240  apps/local/native/job-control.cpp
+113e9cf776f048070356302ee3955400532cad8154a8a683d4a14db1f5da4c71    360020  apps/local/native/job-control.node
+1a23664aa2c6f5f7da7907af1b9db535de01a954d11680fbdeb0d94880b84f93      1731  apps/local/native/line-judge.cpp
+01ae3c2957af527a6dcbce64b226ecb651e7d122637233e395cc0f1a426e7edd       904  apps/local/native/worker.mjs
+637cb132288e5c8f8f37d4eadb1dcb74dda4b167353ef05962b1f1ff91d4c907    278469  apps/local/package-lock.json
+2f1100b4747bb850210d9b049b6a993dde1113af494b911644a2da8e51093d44      1000  apps/local/package.json
 1697727b861468d5ecda37801efe5dda79f9958662f59baae7b8dd2457e39f0a      7316  apps/local/public/app.js
 63380bdb8942f75817793db56a3d245e1a629d337da7f2e6077de2254f1e879f      2413  apps/local/public/index.html
 e18689d60ae8ecf5ce1637eaebf2d07a4b7f65e7397d0d4ffba78c769ff00382      3101  apps/local/public/style.css
-c6ce644be43313a660fde39217b309c2fa8bc90937ada90435f61634eaf64b33     20550  apps/local/server.mjs
-48defbc130eb0943c4efe35cc696940effa697ecc123529720f8e00a3d30b992     22011  apps/local/src/App.tsx
+011fb35eb73d31ea03603363d1e84609f66aa1a00de552c737e5d92a56214988     23379  apps/local/server.mjs
+05c83a7914c0ea1c21d818700de2a5f6bc830f0221dbc5c9eb99c0ab773b54db     25825  apps/local/src/App.tsx
 04033234148f413a777096d86df819d6f5dd62094f0b2128877a976e0f8455b2      5615  apps/local/src/components/ui/alert-dialog.tsx
 8c73c76c70d0f8371541efa1e19beaf4d8283eba5ff89c3e7b34ce295b6989da      2150  apps/local/src/components/ui/alert.tsx
 510f021997ea8215f957ae28de65ffc1bec26633819212b1e9e1773a3acf3aeb      1922  apps/local/src/components/ui/badge.tsx
@@ -46,10 +48,10 @@ c6ce644be43313a660fde39217b309c2fa8bc90937ada90435f61634eaf64b33     20550  apps
 675537ba7f61f2672797c400d2b89a93f8cd30525e30e9c7859446e6666ec070       153  apps/local/src/main.tsx
 8a4116c0897f03cb4b2785b394752bd15fcd42a48657f988c9b02eb383283b6b       568  apps/local/start.cmd
 b30ff23a3f5ebcf067b8226668fd2c1630962c960d340570d1d24f2fa804cfbf      1137  apps/local/tests/client-state.mjs
-0544984235762516d8cc3b55d6560548b07f4f9c1ece0779ed76b765efaa7869     24104  apps/local/tests/integration.mjs
+5d3d8512651bf38f92e158dd040df8e61cae3fb49a9cd605d5d7207569bfdbc1     27655  apps/local/tests/integration.mjs
 2fa7c0e15426c7d210c8892f0577b402dfce2d1fa28f540b40cfe84baccd6414       941  apps/local/tests/slow-compiler.cpp
-f3b7278dcc72167b59c7b7dbae521918c144f9136374369a25e164464c65392b       538  apps/local/tools/build-native.mjs
-7321eb8f0f64f373e56ca1cc92869cf26567f9ecc7c1035437cb66ea27a59830      7054  apps/local/tools/manifest.mjs
+68685a2ebbb298bcbd25412cf4e71f0e613851ab3252801797792c82f29cef1c       574  apps/local/tools/build-native.mjs
+5e6a8597742ae77deb32c90cfd91c285dcb24a0ff5b5a4811394d0cf2e751862      7112  apps/local/tools/manifest.mjs
 96537cfe6775c3a527da5ec6067eed30ebbc21c9ba3600e08f604dd4cc987c32       387  apps/local/tsconfig.json
 0937b21fb7797e1a610b65d8f15cd17d3858d4f31849d34c85d5379873bce0e4       348  apps/local/vite.config.ts
 557f74bdb0036ffbf8c14c36bbbe32bb72b56217fa3b728eb07e956446a818c0      4024  courses/tinyrenderer/level-01/lesson.md
@@ -57,6 +59,8 @@ f3b7278dcc72167b59c7b7dbae521918c144f9136374369a25e164464c65392b       538  apps
 6c9e96ed6b8a1235ccaa23b71781393eb64f284256c76cec648df1c9bfa3c14c       242  courses/tinyrenderer/level-01/starter.cpp
 d712edc258f4fd1b85a008b06fe2786091044801d2cf0f54cc652fc3502a3313       195  courses/tinyrenderer/level-01/transfer.cpp
 be83b66d5043f79bdfee7137cf3acd2421827aae822a0e323dc6fe1467db06dd      5137  courses/tinyrenderer/level-02/lesson.md
+71a676d46edba3b38aa7d714ea0cb054c19c41060f5a468201286da1d0823d30       731  courses/tinyrenderer/level-02/reference.cpp
+f1073eb959bbe37d365375f2fa9eeb35b73291e15d28eb0226b5a7f6ba66ee3f       442  courses/tinyrenderer/level-02/starter.cpp
 6504da7588be790d2c2fe8c9afebba9b6033778b0b38b12a7b6236ea92aa2108      1061  courses/tinyrenderer/support/output.h
 3bc38586967b8a325bf24fc5a9940db3ff3de524854d23e2ee805a608f83c208      7036  courses/tinyrenderer/upstream/tgaimage.cpp
 538a821617cde0373fac3ff56b282fc80475548ca09ae40ba51b5138ed1f0a26      1416  courses/tinyrenderer/upstream/tgaimage.h
