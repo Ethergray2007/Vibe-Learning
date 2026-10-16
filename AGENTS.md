@@ -2,7 +2,7 @@
 
 ## 当前依据
 
-开始前阅读 PROJECT_PLAN.md、TASKS.md 及本任务相关的 COURSE_FORMAT.md、LOCAL_APP_PLAN.md。用户最新明确决定优先于文档。docs/archive/ 用于历史追溯。PLUGIN_ARCHITECTURE.md 是保留的完整产品需求，具体本轮工作仍以 TASKS.md 为界。
+开始前阅读 docs/product/PROJECT_PLAN.md、docs/tasks/TASKS.md 及本任务相关的 docs/prototype/COURSE_FORMAT.md、docs/prototype/LOCAL_APP_PLAN.md。用户最新明确决定优先于文档。docs/archive/ 用于历史追溯。docs/product/PLUGIN_ARCHITECTURE.md 是保留的完整产品需求，具体本轮工作仍以 docs/tasks/TASKS.md 为界。
 
 完整产品沿用 v0.3 的 AI 制课、闯关学习、课程包迁移与插件扩展，部署改为本地。TinyRenderer 前两关是先行验证，不能把原型限制当作功能取消。不要自动引入必需的云服务器，也不要擅自删减尚未实现的需求。
 
@@ -10,8 +10,9 @@
 
 - 开始前检查现有文件和改动，不覆盖、删除或重置其他对话成果。
 - 每个任务明确允许修改的目录。不要顺带重构、扩展产品或修改公共依赖。
-- 课程专项只修改 courses/tinyrenderer/；应用专项须先取得 TASKS.md 中明确的目录分配；Review 默认只读。
-- PROJECT_PLAN.md、TASKS.md、AGENTS.md、COURSE_FORMAT.md、LOCAL_APP_PLAN.md 由主对话统一维护。专项提供修改提案，不并行编辑这些公共文件。
+- 课程专项只修改 courses/tinyrenderer/；应用专项须先取得 docs/tasks/TASKS.md 中明确的目录分配；Review 默认只读。
+- docs/product/PROJECT_PLAN.md、docs/tasks/TASKS.md、AGENTS.md、docs/prototype/COURSE_FORMAT.md、docs/prototype/LOCAL_APP_PLAN.md 由主对话统一维护。专项提供修改提案，不并行编辑这些公共文件。
+- 公共文档集中在 docs/：product/ 完整产品与第一版目标，prototype/ 当前原型约定，tasks/ 当前任务，archive/ 历史追溯。根目录只保留 README.md、AGENTS.md 和 LICENSE，模块内文档跟随模块目录；新增公共文档按上述分类存放，不放回根目录。文档导航见 docs/README.md。
 - 模块内部的低影响选择可自主处理。公共格式、技术栈、共享依赖或产品范围变更，先报告影响，等待主对话确认后执行相关工作。
 - 不以开更多对话为目标；只有独立、依赖明确且可验收的任务才并行。未经用户要求，不自动创建新对话或委派子 Agent。
 

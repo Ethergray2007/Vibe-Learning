@@ -58,7 +58,7 @@ AC 后持久化 passed、passedAt、acceptedSourceHash，查看答案追加 answ
 
 ## 验证边界
 
-目前是自学应用，无防作弊保证；输出通过不等于学习理解。历史源码授权、干净 Windows 环境和真人迁移练习效果仍待核实。接口实现说明见 apps/local/API.md，执行与访问边界见 LOCAL_APP_PLAN.md。
+目前是自学应用，无防作弊保证；输出通过不等于学习理解。历史源码授权、干净 Windows 环境和真人迁移练习效果仍待核实。接口实现说明见 apps/local/API.md，执行与访问边界见 docs/prototype/LOCAL_APP_PLAN.md。
 
 ## R1 补充与第二关决定
 

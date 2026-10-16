@@ -4,10 +4,10 @@
 
 | ID | 任务 | 当前状态 | 范围与证据 |
 | --- | --- | --- | --- |
-| P0 / P1 / P2 | 本地版规划、课程组织与执行方案 | 已确认；按新试用反馈修订 | PROJECT_PLAN.md、COURSE_FORMAT.md、LOCAL_APP_PLAN.md |
+| P0 / P1 / P2 | 本地版规划、课程组织与执行方案 | 已确认；按新试用反馈修订 | docs/product/PROJECT_PLAN.md、docs/prototype/COURSE_FORMAT.md、docs/prototype/LOCAL_APP_PLAN.md |
 | C1 | 第一关课程与固定上游资料 | 资料交付 | courses/tinyrenderer/；授权核对仍待完成 |
 | C2 | 第二关课程 | 已收到接入交接，主对话已确认方案；未接入应用 | docs/LEVEL02_DECISIONS.md；保留精确规则、独立编译、函数判题 |
-| A1 | 第一关本地运行闭环 | 已实现，有构建、编译与浏览器证据 | apps/local/；详见 VALIDATION.md |
+| A1 | 第一关本地运行闭环 | 已实现，有构建、编译与浏览器证据 | apps/local/；详见 apps/local/VALIDATION.md |
 | V1 初次试用 | 发起者试写第一关 | 已收到反馈 | 题面混杂、局部编辑、无 AC；用户要求 shadcn 和章节路线 |
 | A1-UX | 根据试用重做界面、完整代码与第一关判题 | 已实现；20 项检查全部通过 | 主对话修改 apps/local/** 和公共规划；真实浏览器 WA→AC、BMP、保存恢复、路线、窄屏通过 |
 | R1 | 独立审查固定版本 | 已收到 1 项 P1、5 项 P2；本轮六项修复与复测完成，待复核 | apps/local/REVIEW_FIXES.md；24 项检查通过；退出保存竞争浏览器证据 |
@@ -16,7 +16,7 @@
 
 ## 产品范围校正（用户最新澄清）
 
-PROJECT_PLAN.md v0.6 恢复 v0.3 完整产品需求，主要变化为本地部署。下列都是待实现，不是取消：GitHub/AI 制课、模板、课程包导入导出、内容编辑/审核/发布/版本、多题型、提交历史、多学习者独立记录、插件/SDK/MOD。当前 A1/A2 编号只是验证阶段任务，不是完整第一版验收。
+docs/product/PROJECT_PLAN.md v0.6 恢复 v0.3 完整产品需求，主要变化为本地部署。下列都是待实现，不是取消：GitHub/AI 制课、模板、课程包导入导出、内容编辑/审核/发布/版本、多题型、提交历史、多学习者独立记录、插件/SDK/MOD。当前 A1/A2 编号只是验证阶段任务，不是完整第一版验收。
 
 完整里程碑：M1 本地学习评测；M2 课程内容及包迁移；M3 AI 制课；M4 插件与可扩展第一版。先完成现有 Review 和试学，再依赖拆分，不因此自动启动所有开发。
 
